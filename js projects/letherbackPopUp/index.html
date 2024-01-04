@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>my name is dafom</h3>
+  </body>
+
+  <script src="./leatherbackpopup.js"></script>
+  <script>
+    var popUp = new LeatherbackPopUp({
+      amount: 10000,
+      currencyCode: "NGN",
+      onSuccess() {
+        console.log(arg, "ARGUMENT");
+      },
+      callback() {
+        console.log("::::: hi d your stuff works:::::");
+      },
+      key: "pk_test_020a695cf9fg3f19b2bbh43gb2c31c2h43e72g1",
+      personalInformationFlag: false,
+      isInternal: true,
+      customerEmail: "marciacolengn19@mailinator.co",
+      customerName: `Dafom`,
+    });
+
+    popUp.generatePaymentPopUp();
+
+    // setTimeout(() => {
+    //   //   popUp.close();
+    // }, 5000);
+  </script>
+</html>
